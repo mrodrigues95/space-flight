@@ -15,6 +15,6 @@ public class MovingBackground : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         float newPosition = Mathf.Repeat(Time.time * speed, clamps);
-        transform.position = startPosition + Vector3.up * newPosition;
+        transform.position = startPosition + Vector3.down * newPosition;
     }
 }
