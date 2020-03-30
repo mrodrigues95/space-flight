@@ -3,20 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
-    public float moveSpeed = 5f;
+    public float moveSpeed = 5f; // player movement speed
     public Rigidbody2D rb;
     private Vector2 movement;
 
-    // Update is called once per frame
+    // Start is called before the first frame update
+    void Start() {
+
+    }
+
     // Handle input
-    void Update() {
+    private void Update() {
+        // get player input
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
     }
 
     // Handle movement
-    void FixedUpdate() {
+    private void FixedUpdate() {
         // move player with a constant move speed
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);      
     }
 }
