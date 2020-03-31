@@ -20,6 +20,7 @@ public class SpawnAsteroids : MonoBehaviour {
         GameObject a = Instantiate(asteroidPrefab) as GameObject;
         a.transform.position = new Vector2(Random.Range(min.x, max.x), max.y);
 	}
+
     private IEnumerator AsteroidWave() {
         while (true) {
             yield return new WaitForSeconds(respawnTime);
