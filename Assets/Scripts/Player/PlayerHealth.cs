@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour {
     public Slider slider;
     public Gradient gradient;
     public Image fill;
+    //public GameManager gameManager;
 
     // set players max health value to 100
     public void SetMaxHealth(int health) {

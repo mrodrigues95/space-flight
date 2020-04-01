@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
     public float moveSpeed = 5f; // player movement speed
@@ -11,9 +12,11 @@ public class Player : MonoBehaviour {
     public PlayerHealth playerHealth;
     public GameObject explosion;
     private Vector2 movement;
+    public GameObject gameOverUI;
 
     // Start is called before the first frame update
     private void Start() {
+        Time.timeScale = 1f;
         currentHealth = maxHealth;
         playerHealth.SetMaxHealth(maxHealth);
     }
@@ -22,8 +25,10 @@ public class Player : MonoBehaviour {
     private void Update() {
         // get player input
         movement.x = Input.GetAxisRaw("Horizontal");
+
         // stop the game when the player dies
         if (currentHealth <= 0) {
+            gameOverUI.SetActive(true);
             Time.timeScale = 0f;
         }
     }
