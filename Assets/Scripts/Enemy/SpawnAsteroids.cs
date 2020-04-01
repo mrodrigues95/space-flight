@@ -31,7 +31,7 @@ public class SpawnAsteroids : MonoBehaviour {
 
     private void IncreaseAsteroidSpawnTimer() {
         Debug.Log(respawnTime);
-        if (respawnTime > 0.20) {
+        if (respawnTime > 0.10) {
             respawnTime -= 0.10f;
         }
     }

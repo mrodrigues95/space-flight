@@ -235,8 +235,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.02063, y: -132}
-  m_SizeDelta: {x: 850.5, y: 168.9}
+  m_AnchoredPosition: {x: 3, y: -152.70001}
+  m_SizeDelta: {x: 537, y: 112}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &102909224
 MonoBehaviour:
@@ -536,9 +536,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 457340396}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 633263276}
   - {fileID: 1568747414}
@@ -549,9 +549,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.146, y: -2.567}
-  m_SizeDelta: {x: 4087.851, y: 1569.545}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &457340398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -581,12 +581,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -600,7 +600,7 @@ Canvas:
   m_GameObject: {fileID: 457340396}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 2
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -792,8 +792,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.02063, y: -350}
-  m_SizeDelta: {x: 850.5, y: 168.9}
+  m_AnchoredPosition: {x: 2.9999847, y: -306.60004}
+  m_SizeDelta: {x: 537, y: 112}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &620644685
 MonoBehaviour:
@@ -934,8 +934,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.020454407, y: 489.2}
-  m_SizeDelta: {x: 4070.4, y: 591.2}
+  m_AnchoredPosition: {x: 0.000023583, y: 274}
+  m_SizeDelta: {x: 1921.1, y: 299.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &633263277
 MonoBehaviour:
@@ -957,7 +957,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: dc2f91b72794618438f14fc2290a515a, type: 3}
-    m_FontSize: 300
+    m_FontSize: 128
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -970,7 +970,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Space Flight 1.0
 
-    INFO3140 - Assignment 3'
+    INFO3140 - Game Design'
 --- !u!222 &633263278
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1202,8 +1202,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.020507812, y: 86.25}
-  m_SizeDelta: {x: 850.4999, y: 168.9}
+  m_AnchoredPosition: {x: 0.000021219, y: 18}
+  m_SizeDelta: {x: 537, y: 112}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1568747415
 MonoBehaviour:
