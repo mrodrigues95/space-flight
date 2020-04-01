@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour {
-
     // Load the first level
     public void StartGame() {
         SceneManager.LoadScene(1);
