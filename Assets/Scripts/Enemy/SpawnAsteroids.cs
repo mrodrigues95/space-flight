@@ -8,6 +8,7 @@ public class SpawnAsteroids : MonoBehaviour {
 
     // Start is called before the first frame update
     private void Start() {
+        InvokeRepeating("IncreaseAsteroidSpawnTimer", 5.0f, 3.0f);
         StartCoroutine(AsteroidWave());
     }
 
@@ -25,6 +26,13 @@ public class SpawnAsteroids : MonoBehaviour {
         while (true) {
             yield return new WaitForSeconds(respawnTime);
             SpawnAsteroid();
+        }
+    }
+
+    private void IncreaseAsteroidSpawnTimer() {
+        Debug.Log(respawnTime);
+        if (respawnTime > 0.20) {
+            respawnTime -= 0.10f;
         }
     }
 }
