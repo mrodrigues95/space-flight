@@ -15,9 +15,15 @@ public class PlayerHealth : MonoBehaviour {
         fill.color = gradient.Evaluate(1f); // set health bar color to green
     }
 
-    // everytime the player takes damage, reduce the slider
+    // everytime the player takes damage, reduce the visual slider
     public void SetHealth(int health) {
         slider.value = health;
         fill.color = gradient.Evaluate(slider.normalizedValue);
+    }
+
+    // reduce the health value of the player when they take damage
+    public void TakeDamage(int damage, Player player) {
+        player.currentHealth -= damage;
+        SetHealth(player.currentHealth);
     }
 }

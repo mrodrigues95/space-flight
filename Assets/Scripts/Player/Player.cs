@@ -22,6 +22,10 @@ public class Player : MonoBehaviour {
     private void Update() {
         // get player input
         movement.x = Input.GetAxisRaw("Horizontal");
+        // stop the game when the player dies
+        if (currentHealth <= 0) {
+            Time.timeScale = 0f;
+        }
     }
 
     // Handle movement
@@ -39,12 +43,6 @@ public class Player : MonoBehaviour {
         // remove asteroid from the scene
         Destroy(other.gameObject);
         // reduce player health
-        TakeDamage(20);
-    }
-
-    // reduce the health value of the player when they take damage
-    private void TakeDamage(int damage) {
-        currentHealth -= damage;
-        playerHealth.SetHealth(currentHealth);
+        playerHealth.TakeDamage(20, this);
     }
 }

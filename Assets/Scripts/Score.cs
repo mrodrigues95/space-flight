@@ -4,14 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Score : MonoBehaviour {
-    private int score;
+    private int score = 0;
     private float timer = 0.0f;
     public Text scoreTextUI;
-
-    // Start is called before the first frame update
-    private void Start() {
-        score = 0;
-    }
 
     private void Update() {
         timer += Time.deltaTime;
