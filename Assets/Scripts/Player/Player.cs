@@ -25,6 +25,7 @@ public class Player : MonoBehaviour {
     private void Update() {
         // get player input
         movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
 
         // stop the game when the player dies
         if (currentHealth <= 0) {

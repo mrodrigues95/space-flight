@@ -12,6 +12,8 @@ public class LevelStartCountdown : MonoBehaviour {
 
     // Display a short count down at each level start
     private IEnumerator CountdownToStart() {
+        countdownTextUI.text = "Avoid the asteroids for as long as possible!";
+        yield return new WaitForSeconds(2f);
         countdownTextUI.text = "GO!";
         yield return new WaitForSeconds(1f);
         countdownTextUI.gameObject.SetActive(false);

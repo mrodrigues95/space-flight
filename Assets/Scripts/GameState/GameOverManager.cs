@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class GameOverManager : MonoBehaviour {
 
+    private void Start() {
+        Time.timeScale = 1;
+    }
+
     public void Retry() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
