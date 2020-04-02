@@ -25,11 +25,11 @@ public class Player : MonoBehaviour {
     private void Update() {
         // get player input
         movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
 
         // stop the game when the player dies
         if (currentHealth <= 0) {
             gameOverUI.SetActive(true);
+            // TODO: Find a better way to manage game state and remove this.
             Time.timeScale = 0f;
         }
     }
@@ -40,12 +40,14 @@ public class Player : MonoBehaviour {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
-    // Detect player collision with asteroids
+    // Detect player collision with asteroids.
     private void OnTriggerEnter2D(Collider2D other) {
         // load explosion prefab
         GameObject e = Instantiate(explosion) as GameObject;
         // load the explosion animation at the current players position
         e.transform.position = transform.position;
+        // play the asteroid collision sound
+        SoundManager.PlaySound("asteroid-collision");
         // remove asteroid from the scene
         Destroy(other.gameObject);
         // reduce player health

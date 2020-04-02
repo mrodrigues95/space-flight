@@ -7,6 +7,7 @@ public class GameOverManager : MonoBehaviour {
 
     private void Start() {
         Time.timeScale = 1;
+        SoundManager.PlaySound("player-death");
     }
 
     public void Retry() {
