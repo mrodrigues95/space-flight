@@ -1392,6 +1392,7 @@ GameObject:
   - component: {fileID: 930892289}
   - component: {fileID: 930892288}
   - component: {fileID: 930892287}
+  - component: {fileID: 930892291}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1481,6 +1482,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &930892291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930892286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e334cc1dcd614034a980f14683c80e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orbPrefab: {fileID: 4083027402157304239, guid: af4332a12af8ab643807bb26f5952aaa,
+    type: 3}
+  respawnTime: 3
 --- !u!1 &933995585
 GameObject:
   m_ObjectHideFlags: 0
@@ -2175,7 +2191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4f148ec6d4023e4cb19075a981f424f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 15
   clamps: 40.96
   startPosition: {x: 0, y: 0, z: 0}
 --- !u!212 &1682612366

@@ -7,7 +7,7 @@ public class MovingBackground : MonoBehaviour {
     public float speed = 1f; // background speed
     public float clamps;
     [HideInInspector] public Vector3 startPosition;
-    private float timer = 20.0f;
+    private float timer = 15.0f;
 
     // Start is called before the first frame update
     private void Start() {
@@ -21,8 +21,8 @@ public class MovingBackground : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        // set the scrolling speed of the background to 60.0
-        if (speed < 60.0) {
+        // set the scrolling speed of the background to 35.0
+        if (speed < 35.0) {
             timer += Time.deltaTime;
             speed = timer;
         }

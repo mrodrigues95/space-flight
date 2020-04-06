@@ -10,7 +10,6 @@ public class LevelStartCountdown : MonoBehaviour {
 
     private void Start() {
         currentScene = SceneManager.GetActiveScene();
-        Debug.Log("Active scene name is: " + currentScene.name);
         StartCoroutine(CountdownToStart());
     }
 
