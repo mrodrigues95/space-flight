@@ -11,11 +11,13 @@ public class Player : MonoBehaviour {
     public int currentHealth;
     public PlayerHealth playerHealth;
     public GameObject explosion;
-    private Vector2 movement;
     public GameObject gameOverUI;
+    private Vector2 movement;
+    private Scene currentScene;
 
     // Start is called before the first frame update
     private void Start() {
+        currentScene = SceneManager.GetActiveScene();
         Time.timeScale = 1f;
         currentHealth = maxHealth;
         playerHealth.SetMaxHealth(maxHealth);
@@ -23,9 +25,6 @@ public class Player : MonoBehaviour {
 
     // Update is called once per frame
     private void Update() {
-        // get player input
-        movement.x = Input.GetAxisRaw("Horizontal");
-
         // stop the game when the player dies
         if (currentHealth <= 0) {
             gameOverUI.SetActive(true);
@@ -36,6 +35,14 @@ public class Player : MonoBehaviour {
 
     // Handle movement
     private void FixedUpdate() {
+        // get player input
+        movement.x = Input.GetAxisRaw("Horizontal");
+
+        // enable vertical movement if the player is on level 2
+        if (currentScene.name == "LevelTwo") {
+            movement.y = Input.GetAxisRaw("Vertical");
+        }
+
         // move player with a constant move speed
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
