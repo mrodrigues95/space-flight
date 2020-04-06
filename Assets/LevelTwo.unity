@@ -1393,6 +1393,7 @@ GameObject:
   - component: {fileID: 930892288}
   - component: {fileID: 930892287}
   - component: {fileID: 930892291}
+  - component: {fileID: 930892292}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1497,6 +1498,21 @@ MonoBehaviour:
   orbPrefab: {fileID: 4083027402157304239, guid: af4332a12af8ab643807bb26f5952aaa,
     type: 3}
   respawnTime: 3
+--- !u!114 &930892292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930892286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75cfa549a8a1454980266a73078da43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyShipPrefab: {fileID: 5284981663211338066, guid: 2fb5aca460ec2a843b3fe36d4898a245,
+    type: 3}
+  respawnTime: 10
 --- !u!1 &933995585
 GameObject:
   m_ObjectHideFlags: 0
