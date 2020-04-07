@@ -10,7 +10,7 @@ public class Orb : MonoBehaviour {
     // Start is called before the first frame update
     private void Start() {
         rb = this.GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(0, -spawnSpeed);
+        rb.velocity = new Vector2(0, -spawnSpeed); // move the orb along the Y axis
         screenBoundaries = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
     }
 

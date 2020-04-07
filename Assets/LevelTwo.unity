@@ -1512,7 +1512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyShipPrefab: {fileID: 5284981663211338066, guid: 2fb5aca460ec2a843b3fe36d4898a245,
     type: 3}
-  respawnTime: 10
+  respawnTime: 4
 --- !u!1 &933995585
 GameObject:
   m_ObjectHideFlags: 0
