@@ -17,4 +17,8 @@ public class GameOverManager : MonoBehaviour {
     public void MainMenu() {
         SceneManager.LoadScene(0);
     }
+
+    public void LevelTwo() {
+        SceneManager.LoadScene(2);
+    }
 }

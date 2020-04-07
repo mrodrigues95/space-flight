@@ -316,7 +316,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &102909223
 RectTransform:
   m_ObjectHideFlags: 0
@@ -334,7 +334,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.02063, y: -55.999985}
+  m_AnchoredPosition: {x: -0.02063, y: -112}
   m_SizeDelta: {x: 537.3, y: 112}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &102909224
@@ -379,7 +379,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 102909225}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 457340401}
+        m_MethodName: LevelTwo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &102909225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -983,7 +994,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000019236, y: -168}
+  m_AnchoredPosition: {x: 0.000019236, y: -273}
   m_SizeDelta: {x: 537.3, y: 112}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &620644685
@@ -2010,7 +2021,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.020712, y: 0}
+  m_AnchoredPosition: {x: -0.020712, y: 45}
   m_SizeDelta: {x: 537.3, y: 112}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1568747415
@@ -2327,6 +2338,8 @@ MonoBehaviour:
   playerHealth: {fileID: 901424113}
   explosion: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
   gameOverUI: {fileID: 457340396}
+  bulletPrefab: {fileID: 0}
+  bulletPoint: {fileID: 0}
 --- !u!114 &1911572434
 MonoBehaviour:
   m_ObjectHideFlags: 0

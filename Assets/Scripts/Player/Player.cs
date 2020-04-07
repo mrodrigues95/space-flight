@@ -27,8 +27,11 @@ public class Player : MonoBehaviour {
 
     // Update is called once per frame
     private void Update() {
-        if (Input.GetKeyDown("space")) {
-            ShootBullet();
+        // enable shooting when the player reaches level 2
+        if (currentScene.name == "LevelTwo") {
+            if (Input.GetMouseButtonDown(0)) {
+                ShootBullet();
+            }
         }
 
         // stop the game when the player dies
