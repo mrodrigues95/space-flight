@@ -12,6 +12,8 @@ public class Player : MonoBehaviour {
     public PlayerHealth playerHealth;
     public GameObject explosion;
     public GameObject gameOverUI;
+    public GameObject bulletPrefab;
+    public Transform bulletPoint;
     private Vector2 movement;
     private Scene currentScene;
 
@@ -25,6 +27,10 @@ public class Player : MonoBehaviour {
 
     // Update is called once per frame
     private void Update() {
+        if (Input.GetKeyDown("space")) {
+            ShootBullet();
+        }
+
         // stop the game when the player dies
         if (currentHealth <= 0) {
             gameOverUI.SetActive(true);
@@ -47,7 +53,7 @@ public class Player : MonoBehaviour {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
-    // Detect player collision with asteroids.
+    // Detect player collision with enemy objects.
     private void OnTriggerEnter2D(Collider2D other) {
         // load explosion prefab
         GameObject e = Instantiate(explosion) as GameObject;
@@ -59,5 +65,11 @@ public class Player : MonoBehaviour {
         Destroy(other.gameObject);
         // reduce player health
         playerHealth.TakeDamage(20, this);
+    }
+
+    public void ShootBullet() {
+        GameObject b = Instantiate(bulletPrefab) as GameObject;
+        SoundManager.PlaySound("player-shoot-bullet");
+        b.transform.position = bulletPoint.position;
     }
 }
