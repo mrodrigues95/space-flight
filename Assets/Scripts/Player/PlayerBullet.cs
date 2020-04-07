@@ -25,6 +25,7 @@ public class PlayerBullet : MonoBehaviour {
         } else if (other.tag == "enemyShip") {
             GameObject e = Instantiate(explosion) as GameObject;
             e.transform.position = transform.position;
+            SoundManager.PlaySound("enemy-ship-death");
             Destroy(other.gameObject);
             Destroy(this.gameObject);
             Destroy(e.gameObject, 5f);
