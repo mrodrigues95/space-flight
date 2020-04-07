@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class SpawnEnemyShip : MonoBehaviour {
     public GameObject enemyShipPrefab;
+    public GameObject enemyBulletPrefab;
     public float respawnTime;
+    private bool isEnemyShipAlive = false;
 
     // Start is called before the first frame update
     private void Start() {
         StartCoroutine(EnemyShipWave());
-    }
-
-    private void Update() {
-
+        InvokeRepeating("EnemyShootBullet", 4.0f, 1.0f);
     }
 
     // Spawn a new enemy ship.
@@ -25,6 +24,8 @@ public class SpawnEnemyShip : MonoBehaviour {
         GameObject enemyShip = Instantiate(enemyShipPrefab) as GameObject;
         // spawn the enemy at the top left point of the screen
         enemyShip.transform.position = new Vector2(min.x + 2, max.y + -2);
+        // shoot a bullet
+        EnemyShootBullet();
     }
 
     // Call "SpawnShip()" on the respawnTime interval.
@@ -32,6 +33,15 @@ public class SpawnEnemyShip : MonoBehaviour {
         while (true) {
             yield return new WaitForSeconds(respawnTime);
             SpawnShip();
+        }
+    }
+
+    private void EnemyShootBullet() {
+        isEnemyShipAlive = GameObject.FindWithTag("enemyShip");
+        // fire a bullet from the enemy ships current position
+        if (isEnemyShipAlive) {
+            GameObject enemyShipBullet = Instantiate(enemyBulletPrefab) as GameObject;
+            enemyShipBullet.transform.position = GameObject.FindWithTag("enemyShip").transform.position;
         }
     }
 }

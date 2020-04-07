@@ -1512,6 +1512,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyShipPrefab: {fileID: 5284981663211338066, guid: 2fb5aca460ec2a843b3fe36d4898a245,
     type: 3}
+  enemyBulletPrefab: {fileID: 8568817302134162967, guid: e00ce1f4b4f40e84ea4ca6370584088e,
+    type: 3}
   respawnTime: 4
 --- !u!1 &933995585
 GameObject:
@@ -1608,7 +1610,7 @@ GameObject:
   - component: {fileID: 1083426909}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
