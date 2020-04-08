@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour {
     public static AudioClip asteroidCollisionSound;
+    public static AudioClip asteroidDestroyedSound;
     public static AudioClip playerdeathSound;
     public static AudioClip playerBulletSound;
     public static AudioClip enemyShipDeathSound;
@@ -13,6 +14,7 @@ public class SoundManager : MonoBehaviour {
     private void Start() {
         playerBulletSound = Resources.Load<AudioClip>("Sounds/Player/laser_04");
         asteroidCollisionSound = Resources.Load<AudioClip>("Sounds/Enemy/explosion_02");
+        asteroidDestroyedSound = Resources.Load<AudioClip>("Sounds/Enemy/asteroidDestroyed");
         playerdeathSound = Resources.Load<AudioClip>("Sounds/game_over_21");
         enemyShipDeathSound = Resources.Load<AudioClip>("Sounds/Enemy/enemyship_death");
         audioSource = GetComponent<AudioSource>();
@@ -23,8 +25,10 @@ public class SoundManager : MonoBehaviour {
     public static void PlaySound(string clip) {
         switch(clip) {
             case "asteroid-collision":
-                Debug.Log(audioSource.volume);
                 audioSource.PlayOneShot(asteroidCollisionSound);
+                break;
+            case "asteroid-destroyed":
+                audioSource.PlayOneShot(asteroidDestroyedSound);
                 break;
             case "player-death":
                 audioSource.PlayOneShot(playerdeathSound);

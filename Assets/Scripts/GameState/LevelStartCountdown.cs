@@ -19,6 +19,8 @@ public class LevelStartCountdown : MonoBehaviour {
             countdownTextUI.text = "Avoid the asteroids for as long as possible!";
         } else if (currentScene.name == "LevelTwo") {
             countdownTextUI.text = "Destroy as many enemies as you can!\nUse your left mouse to shoot.";
+            yield return new WaitForSeconds(3f);
+            countdownTextUI.text = "You can now move up and down with the w and s keys.";
         }
         yield return new WaitForSeconds(3f);
         countdownTextUI.text = "GO!";

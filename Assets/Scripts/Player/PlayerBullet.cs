@@ -19,6 +19,7 @@ public class PlayerBullet : MonoBehaviour {
         if (other.tag == "asteroid") {
             GameObject e = Instantiate(explosion) as GameObject;
             e.transform.position = transform.position;
+            SoundManager.PlaySound("asteroid-destroyed");
             Destroy(other.gameObject);
             Destroy(this.gameObject);
             Destroy(e.gameObject, 5f);
